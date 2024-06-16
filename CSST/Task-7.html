@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title><style>
+    body {
+      background-color: #741b56;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+   
+    .container {
+      background-color: #4f0027;
+      color: #FFFFFF;
+      padding: 20px;
+      margin: 50px auto;
+      margin-bottom: 30px;
+      width: 750px;
+      height: 100%;
+      text-align: left;
+    }
+   
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+   
+    .form-group label {
+      width: 150px;
+      margin-right: 10px;
+    }
+   
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      flex: 1;
+    }
+   
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+   
+    .button {
+      background-color: #FFFFFF;
+      color: #242223;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+   
+    .form-radio-group {
+      display: flex;
+      align-items: center;
+    }
+   
+    .form-radio-group label {
+      margin-right: 15px;
+    }
+   
+    </style>
+    </head>
+    <body>
+   
+    <div class="container">
+      <h2>Task-7</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="your email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+        <div class="form-group form-radio-group">
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </div>
+        <div class="form-group">
+          <label for="language">Select language:</label>
+          <select id="language" name="language">
+            <option value="select">select the language</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+            <option value="chinese">Chinese</option>
+            <option value="japanese">Japanese</option>
+            <option value="korean">Korean</option>
+            <option value="hindi">Hindi</option>
+            <option value="arabic">Arabic</option>
+            <option value="portuguese">Portuguese</option>
+            <option value="russian">Russian</option>
+            <option value="italian">Italian</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip">
+        </div>
+        <div class="form-group">
+          <label for="about">About:</label>
+          <textarea id="about" name="about" placeholder="Write about yourself..."></textarea>
+        </div>
+        <button class="button">Register</button>
+      </form>
+    </div>
+   
+    </body>
+    </html>
 
