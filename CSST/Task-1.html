@@ -6,7 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task - 1</title>
     <style>
-        #t1,
+        body {
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-template-rows: 6fr 6fr;
+            margin: 20px;
+            grid-gap: 10px;
+        }
+
+        table {
+            background-color: aquamarine;
+            padding: 5px;
+            width: 45%;
+            margin-left: 180px;
+            margin-top: 80px;
+        }
+
+ #t1,
         th,
         td {
             padding: 5px;
@@ -36,106 +62,101 @@
 </head>
 
 <body>
-    <h1>Task 1</h1>
-    <table style="background-color: aquamarine;" id="t1">
-        <tr style="text-align: center;">
-            <th>First Name</th>
-            <th>Last Name </th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
+    <h2>Task 1</h2>
+    <div class="container">
 
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
+        <table id="t1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>60</td>
+            </tr>
+        </table>
 
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>60</td>
-        </tr>
-    </table>
-    <hr>
-    <table style="background-color: aquamarine;" id="t2">
-        <tr style="text-align: center;">
-            <th>First Name</th>
-            <th>Last Name </th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
+        <table id="t2">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>60</td>
+            </tr>
+        </table>
 
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
+        <table id="t3">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>60</td>
+            </tr>
+        </table>
 
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>60</td>
-        </tr>
-    </table>
-    <hr>
-    <table style="background-color: aquamarine;" id="t3">
-        <tr style="text-align: center;">
-            <th>First Name</th>
-            <th>Last Name </th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
-
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
-
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>60</td>
-        </tr>
-    </table>
-    <hr>
-    <table style="background-color: aquamarine;" id="t4">
-        <tr style="text-align: center;">
-            <th>First Name</th>
-            <th>Last Name </th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
-
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
-
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>60</td>
-        </tr>
-    </table>
+        <table id="t4">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>60</td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
