@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Task 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+    <style>
+        .wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1366px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+        body {
+            color: #666666;
+            background: #dddddd;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+
+        h1,
+        h2, 
+        h3, 
+        h4,
+        h5, 
+        h6 {
+            color: #030f27;
+        }
+
+        a {
+            color: #666666;
+            transition: .3s;
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+            color: #fdbe33;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .btn:focus {
+            box-shadow: none;
+        }
+
+        .top-bar {
+            position: relative;
+            height: 90px;
+            background: #fdbe33;
+        }
+
+        .top-bar .logo {
+            padding: 15px 0;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .top-bar .logo h1 {
+            margin: 0;
+            color: #030f27;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+        }
+
+        .top-bar .logo img {
+            max-width: 100%;
+            max-height: 60px;
+        }
+
+        .top-bar .top-bar-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .top-bar .top-bar-icon {
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-bar .top-bar-icon [class^="flaticon-"]::before {
+            margin: 0;
+            color: #030f27;
+            font-size: 40px;
+        }
+
+        .top-bar .top-bar-text {
+            padding-left: 15px;
+        }
+
+        .top-bar .top-bar-text h3 {
+            margin: 0 0 5px 0;
+            color: #030f27;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .top-bar .top-bar-text p {
+            margin: 0;
+            color: #030f27;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        @media (min-width: 992px) {
+            .top-bar {
+                padding: 0 60px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .top-bar .logo {
+                text-align: center;
+            }
+        }
+        .nav-bar {
+            position: relative;
+            background: #fdbe33;
+            transition: .3s;
+        }
+
+        .nav-bar .container-fluid {
+            padding: 0;
+        }
+
+        .nav-bar.nav-sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 1366px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+            z-index: 999;
+        }
+
+        .nav-bar .navbar {
+            height: 100%;
+            background: #030f27 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link,
+        .navbar-dark .navbar-nav .nav-link:focus,
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            padding: 10px 10px 8px 10px;
+            color: #ffffff;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #fdbe33;
+            transition: none;
+        }
+
+        .nav-bar .dropdown-menu {
+            margin-top: 0;
+            border: 0;
+            border-radius: 0;
+            background: #f8f9fa;
+        }
+
+        .nav-bar .btn {
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+        }
+
+        .nav-bar .btn:hover {
+            color: #030f27;
+            background: #fdbe33;
+            border-color: #fdbe33;
+        }
+
+        @media (min-width: 992px) {
+            .nav-bar {
+                padding: 0 75px;
+            }
+            
+            .nav-bar.nav-sticky {
+                padding: 0;
+            }
+            
+            .nav-bar .navbar {
+                padding: 20px;
+            }
+            
+            .nav-bar .navbar-brand {
+                display: none;
+            }
+            
+            .nav-bar a.nav-link {
+                padding: 8px 15px;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .nav-bar .navbar {
+                padding: 15px;
+            }
+            
+            .nav-bar a.nav-link {
+                padding: 5px;
+            }
+            
+            .nav-bar .dropdown-menu {
+                box-shadow: none;
+            }
+            
+            .nav-bar .btn {
+                display: none;
+            }
+        }
+        .mainer{
+            background-color: rgba(0, 0, 0, .3);
+            height: 80vh;
+            padding-top: 200px;
+            padding-left: 250px;
+        }
+        .main {
+            height: 80vh;
+            background-image: url(./carousel-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .box{
+            text-align: center;
+            color: #ffffff;
+            width: 900px;
+            height: 200px;
+            
+        }
+        .main .btn {
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+            font-size: 30px;
+            font-weight:lighter;
+        }
+
+        .main .btn:hover {
+            color: #030f27;
+            background: #fdbe33;
+            border-color: #fdbe33;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="logo">
+                                <h1>Builderz</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-calendar"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Opening Hour</h3>
+                                        <p>Mon - Fri, 8:00 - 9:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Call Us</h3>
+                                        <p>+012 345 6789</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-icon">
+                                        <i class="flaticon-send-mail"></i>
+                                    </div>
+                                    <div class="top-bar-text">
+                                        <h3>Email Us</h3>
+                                        <p>info@example.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--top-bar-->    
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="#" class="nav-item nav-link">About</a>
+                            <a href="#" class="nav-item nav-link">Service</a>
+                            <a href="#" class="nav-item nav-link">Team</a>
+                            <a href="#" class="nav-item nav-link">Project</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Blog Page</a>
+                                    <a href="#" class="dropdown-item">Single Page</a>
+                                </div>
+                            </div>
+                            <a href="#" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="ml-auto">
+                            <a class="btn" href="#">Get A Quote</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--nav-bar-->
+        <div class="main">
+                <div class="mainer">
+                    <div class="box">
+                    <p style="color: #ffffff;font-size: 30px;">We Are Professionals </p>
+                    <h1 style="color: #ffffff;font-size: 60px;font-weight: bolder;">For Your Dream Project</h1><br>
+                    <a class="btn" href="#">Get A Quote</a>
+                </div>
+            </div>
+        </div>
+        <!--mainer-->
+        <div class="row text-center fs-10">
+            <div class="col-sm-1 col-md-4 d-flex justify-content-around"
+                style="background-color: #041025; color:#f5c052; padding-top: 10%; padding-bottom: 10%;">
+                <div style="padding: 3%;"><svg width="64" height="64" viewBox="0 0 64 64"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                        class="iconify iconify--emojione-monotone">
+                        <g stroke-width="0" />
+                        <g stroke-linecap="round" stroke-linejoin="round" />
+                        <g fill="#f5c052">
+                            <path
+                                d="M40.322 4.102C38.603 2.702 35.304 2 32 2c-3.302 0-6.601.701-8.32 2.101v21.41h16.643zm18.062 23.472.532.284C58.39 17.578 53.723 9.323 41.937 6.47l.001 17.323c6.843.676 12.639 2.022 16.446 3.781m-36.321-3.781.002-17.323C10.277 9.323 5.61 17.578 5.084 27.859l.532-.284c3.808-1.76 9.604-3.106 16.447-3.782" />
+                            <path
+                                d="M58 35.486V32h4c0-1.345-1.032-2.616-2.833-3.761-2.343-.574-9.126-2.125-17.229-2.933v1.717H22.063v-1.717c-8.105.808-14.892 2.358-17.231 2.935C3.031 29.384 2 30.655 2 32h4v3.486C4.496 36.193 3 37.79 3 41c0 3.981 2.302 5.506 4.064 5.893C8.271 55.282 26.084 62 32 62s23.729-6.718 24.936-15.107C58.698 46.506 61 44.981 61 41c0-3.21-1.496-4.807-3-5.514M56 45h-1v1c0 7.037-16.911 14-23 14S9 53.037 9 46v-1H8c-.122 0-3-.046-3-4 0-3.834 2.701-3.994 3-4h1v-5h46v5h1c.122 0 3 .046 3 4 0 3.834-2.701 3.994-3 4" />
+                            <path
+                                d="M25 38.558c0-.552-.113-1.073-.295-1.562 1.03.747 1.859 1.752 2.295 3.06 0-7.998-14-7.998-14-.998.652-1.632 2.162-2.72 3.963-3.252A4.45 4.45 0 0 0 16 38.558a4.5 4.5 0 0 0 9 0m12 1.498c.436-1.308 1.265-2.313 2.295-3.06A4.5 4.5 0 0 0 39 38.558a4.5 4.5 0 0 0 9 0 4.46 4.46 0 0 0-.963-2.752c1.801.532 3.311 1.62 3.963 3.252 0-7-14-7-14 .998m3.1 9.652H23.901c-.9 0-.9.857-.9.857 0 3.43 4.5 5.143 9 5.143s9-1.713 9-5.143c-.001 0-.001-.857-.901-.857" />
+                        </g>
+                    </svg>
+                </div>
+                <div><span class="fs-3 fw-bolder">Expert Workers </span><br> Lorem ipsum sdf sdfa sdsfssdf dsfas sdf sdf
+                    dsf dfsndffwseif dfn
+                    so </div>
+            </div>
+            <div class="col-sm-1 col-md-4 d-flex justify-content-around" style="padding-top: 10%; padding-bottom: 10%;">
+                <div style="padding: 3%;"><svg height="64" width="64" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 290.625 290.625" xml:space="preserve">
+                        <g stroke-width="0" />
+                        <g stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M276.563 281.25V60.938h-16.645l-37.5-42.188h-25.542V0H14.062v281.25H4.687v9.375h281.25v-9.375zm-58.35-253.125 29.16 32.813h-50.498V46.875H187.5v14.063h-50.498l29.17-32.813zm-82.275 14.063v-9.375h13.519l-8.334 9.375zM107.812 281.25H56.25v-70.313h51.563v70.313zm0-126.562h-18.75v-9.375h18.75zm0-37.5h-18.75v-9.375h18.75zm0-37.5h-18.75v-9.375h18.75zm-28.125-18.75v28.125h28.125v9.375H79.687v28.125h28.125v9.375H79.687v28.125h28.125v18.75h-75v9.375h75v9.375h-75v9.375h14.063v70.313H23.437V9.375H187.5v9.375h-25.542l-4.167 4.688h-31.228v28.125h6.23l-8.334 9.375zm75.001 220.312h-18.75v-28.125c0-5.17 4.205-9.375 9.375-9.375s9.375 4.205 9.375 9.375zm46.875 0h-18.75v-28.125c0-5.17 4.205-9.375 9.375-9.375s9.375 4.205 9.375 9.375zm46.875 0h-18.75v-28.125c0-5.17 4.205-9.375 9.375-9.375s9.375 4.205 9.375 9.375zm18.75 0h-9.375v-28.125c0-10.341-8.409-18.75-18.75-18.75s-18.75 8.409-18.75 18.75v28.125h-9.375v-28.125c0-10.341-8.409-18.75-18.75-18.75s-18.75 8.409-18.75 18.75v28.125h-9.375v-28.125c0-10.341-8.409-18.75-18.75-18.75s-18.75 8.409-18.75 18.75v28.125h-9.375V70.313h150z" />
+                        <path
+                            d="M164.063 192.188h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm-84.375-56.25h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm-84.375-56.25h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm-84.375-56.25h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zm56.25-18.75h-37.5v28.125h37.5zm-9.375 18.75h-18.75v-9.375h18.75zM32.812 164.063h37.5v-28.125h-37.5zm9.375-18.75h18.75v9.375h-18.75zm-9.375-18.75h37.5V98.438h-37.5zm9.375-18.75h18.75v9.375h-18.75zm-9.375-18.75h37.5V60.938h-37.5zm9.375-18.75h18.75v9.375h-18.75zm-9.375-18.75h37.5V23.438h-37.5zm9.375-18.75h18.75v9.375h-18.75zm37.5 18.75h37.5V23.438h-37.5zm9.375-18.75h18.75v9.375h-18.75z" />
+                    </svg>
+                </div>
+                <div><span class="fs-3 fw-bolder">Quality Work </span><br> Lorem ipsum sdf sdfa sdsfssdf dsfas sdf sdf
+                    dsf dfsndffwseif dfn
+                    so </div>
+            </div>
+            <div class="col-sm-1 col-md-4 d-flex justify-content-around"
+                style="background-color: #041025; color:#f5c052; padding-top: 10%; padding-bottom: 10%;">
+                <div style="padding: 3%;"><svg height="64" width="64" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 48.401 48.401" xml:space="preserve">
+                        <g stroke-width="0" />
+                        <g stroke-linecap="round" stroke-linejoin="round" />
+                        <path style="fill:#f5c052"
+                            d="m16.36 18.515-3.17 3.17c-.586.588-.979 1.354-.979 2.208v1.422a1 1 0 0 0 1 1h4.838c.552 0 1-.422 1-.942 0-.522-.448-.944-1.001-.944h-2.629c-.552 0-1-.12-1-.267v-.268c0-.32.124-.623.338-.819l3.17-3.169c.587-.588.961-1.354.961-2.208v-1.532c0-1.548-1.46-2.813-3.259-2.813s-3.258 1.264-3.258 2.813v.623c0 .345.447.624 1 .624h.208c.552 0 1-.279 1-.624v-.623c0-.498.481-.926 1.05-.926.588 0 1.051.428 1.051.926v1.532c0 .319-.124.604-.32.817m10.774-5.021h-.207c-.553 0-1.231.384-1.516.858l-4.064 6.779c-.283.474-.514 1.281-.514 1.802 0 .52.447.943 1 .943h3.091c.554 0 1 .447 1 1v.439a1 1 0 0 0 1 1h.209c.553 0 1-.446 1-1v-.439c0-.553.158-1 .354-1 .198 0 .356-.422.356-.943 0-.522-.158-.945-.355-.945-.195 0-.355-.447-.355-1v-6.494a.997.997 0 0 0-.999-1m-1.209 7.494c0 .553-.446 1-1 .999h-.688c-.552 0-.771-.385-.49-.86l1.669-2.82c.281-.474.51-.413.51.14zm5.499-9.226c-.381 0-.689.447-.689 1v6.635c0 .553.309 1 .689.999.381 0 .69-.447.69-1v-3.401c0-.324.312-.576.685-.576.371 0 .684.252.684.576v3.401c0 .553.309 1 .689 1s.688-.447.688-1v-3.401c0-.935-.923-1.691-2.062-1.691q-.184.001-.352.04c-.191.044-.333-.331-.333-.884v-.698c.001-.553-.309-1-.689-1" />
+                        <path style="fill:#f5c052"
+                            d="m47.463 25.801-1.977-.617a22.7 22.7 0 0 0-.129-5.721C43.487 7.105 31.913-1.427 19.553.444 7.197 2.315-1.335 13.891.536 26.249a23 23 0 0 0 1.006 4.069c.365 1.043 1.186 1.748 1.734 1.617.547-.131.598-1.045.225-2.084a21 21 0 0 1-.986-3.904C.808 14.682 8.587 4.128 19.854 2.423s21.819 6.073 23.526 17.34c.241 1.603.297 3.216.164 4.815l-1.846-.576c-1.021-.318-1.648.299-1.406 1.375l1.309 5.826c.242 1.076 1.098 1.344 1.908.596l4.392-4.047c.812-.749.614-1.622-.438-1.951" />
+                        <path style="fill:#f5c052"
+                            d="M46.551 41.784a1.5 1.5 0 0 0-.102-.881c-.866-1.956-3.608-6.686-10.331-8.334-3.082-.758-7.685-1.661-12.108-1.661l-.453.003c-6.573.098-12.463 1.432-12.65 1.477-.206.033-5.076.869-8.325 4.352l.012.012c-.562.469-1.082 1.321-1.314 1.738l-.02-.013a10 10 0 0 0-.988 2.14c-.094.293-.09.59-.014.867-.14.241-.228.517-.23.813L0 45.834a1.663 1.663 0 0 0 1.645 1.674l10.928.09h.009c.909 0 1.653-.738 1.661-1.646l.028-3.538a1.65 1.65 0 0 0-.19-.767c.053-.076.116-.15.157-.228.152-.291.882-1.258 3.875-1.442.96-.06 2.111-.089 3.421-.089 3.779 0 7.694.25 7.733.253l.122.001c.407 0 2.446.072 2.576 1.493.015.163.057.314.109.46a1.65 1.65 0 0 0-.286.977l.117 3.543a1.656 1.656 0 0 0 1.659 1.599l11.745-.386a1.664 1.664 0 0 0 1.6-1.712l-.117-3.539a1.63 1.63 0 0 0-.241-.793m-34.307 3.811-10.242-.084.022-2.856 10.242.084zm17.161-7.451h-.01c-.039-.002-4.016-.257-7.862-.257-1.351 0-2.544.031-3.544.093-3.598.223-4.99 1.489-5.525 2.514-.016.03-.061.072-.016.072L2.43 40.557c.149-.346.329-.69.54-1.042.139-.197.84-1.129 1.035-1.367l.042-.044c2.774-2.975 7.145-3.736 7.248-3.756.059-.014 5.929-1.344 12.292-1.438l.424-.003c4.224 0 8.656.872 11.632 1.604 5.107 1.253 7.564 4.511 8.606 6.442l-10.327.229c-.369-2.234-2.633-3.038-4.517-3.038m4.487 8.058-.095-2.856 11.007-.36.095 2.854z" />
+                    </svg>
+                </div>
+                <div><span class="fs-3 fw-bolder">24/7 Support </span><br> Lorem ipsum sdf sdfa sdsfssdf dsfas sdf sdf
+                    dsf dfsndffwseif dfn
+                    so </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
